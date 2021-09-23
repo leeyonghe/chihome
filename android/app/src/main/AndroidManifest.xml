@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.chihome">
    <application
-        android:label="chihome"
+        android:label="차이홈"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
