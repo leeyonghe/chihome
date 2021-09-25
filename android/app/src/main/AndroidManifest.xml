@@ -1,7 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.chihome">
+    package="com.chihome.kr">
+    <uses-permission android:name="android.permission.INTERNET" />
    <application
-        android:label="차이홈"
+        android:label="차이홈중국어"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

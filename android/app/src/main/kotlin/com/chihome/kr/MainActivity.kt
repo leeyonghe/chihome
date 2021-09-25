@@ -1,4 +1,4 @@
-package com.example.chihome
+package com.chihome.kr
 
 import io.flutter.embedding.android.FlutterActivity
 

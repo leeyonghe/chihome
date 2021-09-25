@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'loginpage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -8,26 +9,34 @@ class MyApp extends StatelessWidget {
 
   const MyApp({Key? key}) : super(key: key);
 
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'ChiHome',
       theme: ThemeData(primarySwatch: Colors.blue,),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const LoadingPage(),
     );
   }
 
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-  final String title;
+class LoadingPage extends StatefulWidget {
+  const LoadingPage({Key? key}) : super(key: key);
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<LoadingPage> createState(){
+    return _LoadingPageState();
+  }
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _LoadingPageState extends State<LoadingPage> {
   @override
   Widget build(BuildContext context) {
+    Future.delayed(const Duration(milliseconds: 3000), () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const LoginPage()),
+        );
+    });
     return Scaffold(
       appBar: null,
       body: Container(

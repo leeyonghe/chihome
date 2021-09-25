@@ -1,0 +1,46 @@
+{
+  "items": [
+    {
+      "image": "assets/hsk1/logo.jpg",
+      "ch": "爱",
+      "speak" : "ài",
+      "kr": "좋아하다",
+      "sound": "assets/hsk1/149.m4a"
+    },
+    {
+      "image": "assets/hsk1/logo.jpg",
+      "ch": "爱",
+      "speak" : "ài",
+      "kr": "좋아하다",
+      "sound": "assets/hsk1/149.m4a"
+    },
+    {
+      "image": "assets/hsk1/logo.jpg",
+      "ch": "爱",
+      "speak" : "ài",
+      "kr": "좋아하다",
+      "sound": "assets/hsk1/149.m4a"
+    },
+    {
+      "image": "assets/hsk1/logo.jpg",
+      "ch": "爱",
+      "speak" : "ài",
+      "kr": "좋아하다",
+      "sound": "assets/hsk1/149.m4a"
+    },
+    {
+      "image": "assets/hsk1/logo.jpg",
+      "ch": "爱",
+      "speak" : "ài",
+      "kr": "좋아하다",
+      "sound": "assets/hsk1/149.m4a"
+    },
+    {
+      "image": "assets/hsk1/logo.jpg",
+      "ch": "爱",
+      "speak" : "ài",
+      "kr": "좋아하다",
+      "sound": "assets/hsk1/149.m4a"
+    }
+  ]
+}
