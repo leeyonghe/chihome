@@ -95,29 +95,39 @@ class LoginState extends State<LoginPage> {
 
 
 
+double getScreenWidth(){
+  return MediaQuery.of(context).size.width*0.6;
+}
+
 Container _buildGoogleLoginButton() {
-  final ButtonStyle style = ElevatedButton.styleFrom(textStyle: const TextStyle(fontSize: 15));
     return Container(
-      margin: const EdgeInsets.only(left: 16, top: 16, right: 16, bottom: 0),
+      margin: const EdgeInsets.only(left: 30, top: 16, right: 30, bottom: 0),
       child: ElevatedButton(
-           style: style,
+           style: ButtonStyle(
+              fixedSize: MaterialStateProperty.all<Size>(Size(getScreenWidth(),45)),
+              backgroundColor: MaterialStateProperty.all<Color>(Colors.red),
+              textStyle: MaterialStateProperty.all<TextStyle>(const TextStyle(fontSize: 20))
+            ),
            onPressed: () => {
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(builder: (context) => const MainPage()),
-              // )
-              _googleSignIn.signInSilently()
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const MainPage()),
+              )
+              // _googleSignIn.signInSilently()
            },
-           child: const Text('Apple'),
+           child: const Text('Google'),
       ));
 }
 
 Container _buildAppleLoginButton() {
-  final ButtonStyle style = ElevatedButton.styleFrom(textStyle: const TextStyle(fontSize: 15));
     return Container(
-      margin: const EdgeInsets.only(left: 16, top: 16, right: 16, bottom: 0),
+      margin: const EdgeInsets.only(left: 30, top: 16, right: 30, bottom: 0),
       child: ElevatedButton(
-           style: style,
+           style: ButtonStyle(
+              fixedSize: MaterialStateProperty.all<Size>(Size(getScreenWidth(),45)),
+              backgroundColor: MaterialStateProperty.all<Color>(Colors.grey),
+              textStyle: MaterialStateProperty.all<TextStyle>(const TextStyle(fontSize: 20))
+            ),
            onPressed: () => {
               Navigator.push(
                 context,
@@ -129,11 +139,14 @@ Container _buildAppleLoginButton() {
 }
 
 Container _buildNaverLoginButton() {
-  final ButtonStyle style = ElevatedButton.styleFrom(textStyle: const TextStyle(fontSize: 15));
     return Container(
-      margin: const EdgeInsets.only(left: 16, top: 16, right: 16, bottom: 0),
+      margin: const EdgeInsets.only(left: 30, top: 16, right: 30, bottom: 0),
       child: ElevatedButton(
-           style: style,
+           style: ButtonStyle(
+              fixedSize: MaterialStateProperty.all<Size>(Size(getScreenWidth(),45)),
+              backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
+              textStyle: MaterialStateProperty.all<TextStyle>(const TextStyle(fontSize: 20))
+            ),
            onPressed:  () => {
               Navigator.push(
                 context,
@@ -146,11 +159,14 @@ Container _buildNaverLoginButton() {
 }
 
 Container _buildKakaoLoginButton() {
-  final ButtonStyle style = ElevatedButton.styleFrom(textStyle: const TextStyle(fontSize: 15));
     return Container(
-      margin: const EdgeInsets.only(left: 16, top: 16, right: 16, bottom: 0),
+      margin: const EdgeInsets.only(left: 30, top: 16, right: 30, bottom: 0),
       child: ElevatedButton(
-           style: style,
+           style: ButtonStyle(
+              fixedSize: MaterialStateProperty.all<Size>(Size(getScreenWidth(),45)),
+              backgroundColor: MaterialStateProperty.all<Color>(Colors.yellow),
+              textStyle: MaterialStateProperty.all<TextStyle>(const TextStyle(fontSize: 20))
+            ),
            onPressed:  () => {
               Navigator.push(
                 context,

@@ -3,6 +3,9 @@ import 'wordpage.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import 'package:wave/config.dart';
+import 'package:wave/wave.dart';
+
 class MainPage extends StatefulWidget {
 
   const MainPage({Key? key}) : super(key: key);
@@ -34,90 +37,319 @@ class LoginState extends State<MainPage> {
                 onTap: () => {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const WordPage()),
+                    MaterialPageRoute(builder: (context) => const WordPage(index: 1)),
                   )
                 },
-                child: Container(  
-                padding: const EdgeInsets.all(8),  
-                child: const Center(
+                child: Container(
+                  decoration: BoxDecoration(border: Border.all(
+                      color: Colors.transparent,
+                      width: 1,
+                    ),
+                    borderRadius: const BorderRadius.all(Radius.circular(15.0)),
+                  ),
+                // padding: const EdgeInsets.all(8),  
+                child: Stack(
+                  children: [
+                Positioned(child: Container(
+                  alignment: Alignment.bottomCenter,
+                  decoration: BoxDecoration(border: Border.all(
+                      color: Colors.transparent,
+                      width: 1,
+                    ),
+                    borderRadius: const BorderRadius.all(Radius.circular(15.0)),
+                    color: const Color(0xfffaae25)
+                  )
+                )),
+                    Positioned(child: WaveWidget(
+                  config: CustomConfig(
+                      gradients: [
+                          [Colors.orange, const Color(0xEEF44336)],
+                          [Colors.red[800]!, const Color(0x77E57373)],
+                          [Colors.orange, const Color(0x66FF9800)],
+                          [Colors.yellow[800]!, const Color(0x55FFEB3B)]
+                      ],
+                      durations: [35000, 19440, 10800, 6000],
+                      heightPercentages: [0.20, 0.23, 0.25, 0.30],
+                      // blur: const MaskFilter.blur(BlurStyle.solid, 10),
+                      gradientBegin: Alignment.bottomLeft,
+                      gradientEnd: Alignment.topRight,
+                  ),
+                  waveAmplitude: 9,
+                  size: const Size(
+                      double.infinity,
+                      100,
+                  ),
+              )),
+              const Positioned(child: Center(
                    child: Text('HSK 1급', style: TextStyle(fontSize: 20)),
-                ),  
-                color: Colors.yellow,  
+                ))
+                  ],
+                ),
               )),
               GestureDetector(
                 onTap: () => {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const WordPage()),
+                    MaterialPageRoute(builder: (context) => const WordPage(index: 1)),
                   )
-                  
                 },
-                child: Container(  
-                padding: const EdgeInsets.all(8),  
-                child: const Center(
-                   child: Text('HSK 1급', style: TextStyle(fontSize: 20)),
-                ),  
-                color: Colors.yellow,  
+                child: Container(
+                  decoration: BoxDecoration(border: Border.all(
+                      color: Colors.transparent,
+                      width: 1,
+                    ),
+                    borderRadius: const BorderRadius.all(Radius.circular(15.0)),
+                  ),
+                // padding: const EdgeInsets.all(8),  
+                child: Stack(
+                  children: [
+                Positioned(child: Container(
+                  alignment: Alignment.bottomCenter,
+                  decoration: BoxDecoration(border: Border.all(
+                      color: Colors.transparent,
+                      width: 1,
+                    ),
+                    borderRadius: const BorderRadius.all(Radius.circular(15.0)),
+                    color: const Color(0xfffaae25)
+                  )
+                )),
+                    Positioned(child: WaveWidget(
+                  config: CustomConfig(
+                      gradients: [
+                          [Colors.orange, const Color(0xEEF44336)],
+                          [Colors.red[800]!, const Color(0x77E57373)],
+                          [Colors.orange, const Color(0x66FF9800)],
+                          [Colors.yellow[800]!, const Color(0x55FFEB3B)]
+                      ],
+                      durations: [35000, 19440, 10800, 6000],
+                      heightPercentages: [0.20, 0.23, 0.25, 0.30],
+                      // blur: const MaskFilter.blur(BlurStyle.solid, 10),
+                      gradientBegin: Alignment.bottomLeft,
+                      gradientEnd: Alignment.topRight,
+                  ),
+                  waveAmplitude: 9,
+                  size: const Size(
+                      double.infinity,
+                      100,
+                  ),
+              )),
+              const Positioned(child: Center(
+                   child: Text('HSK 2급', style: TextStyle(fontSize: 20)),
+                ))
+                  ],
+                ),
               )),
               GestureDetector(
                 onTap: () => {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const WordPage()),
+                    MaterialPageRoute(builder: (context) => const WordPage(index: 1)),
                   )
-                  
                 },
-                child: Container(  
-                padding: const EdgeInsets.all(8),  
-                child: const Center(
-                   child: Text('HSK 1급', style: TextStyle(fontSize: 20)),
-                ),  
-                color: Colors.yellow,  
+                child: Container(
+                  decoration: BoxDecoration(border: Border.all(
+                      color: Colors.transparent,
+                      width: 1,
+                    ),
+                    borderRadius: const BorderRadius.all(Radius.circular(15.0)),
+                  ),
+                // padding: const EdgeInsets.all(8),  
+                child: Stack(
+                  children: [
+                Positioned(child: Container(
+                  alignment: Alignment.bottomCenter,
+                  decoration: BoxDecoration(border: Border.all(
+                      color: Colors.transparent,
+                      width: 1,
+                    ),
+                    borderRadius: const BorderRadius.all(Radius.circular(15.0)),
+                    color: const Color(0xfffaae25)
+                  )
+                )),
+                    Positioned(child: WaveWidget(
+                  config: CustomConfig(
+                      gradients: [
+                          [Colors.orange, const Color(0xEEF44336)],
+                          [Colors.red[800]!, const Color(0x77E57373)],
+                          [Colors.orange, const Color(0x66FF9800)],
+                          [Colors.yellow[800]!, const Color(0x55FFEB3B)]
+                      ],
+                      durations: [35000, 19440, 10800, 6000],
+                      heightPercentages: [0.20, 0.23, 0.25, 0.30],
+                      // blur: const MaskFilter.blur(BlurStyle.solid, 10),
+                      gradientBegin: Alignment.bottomLeft,
+                      gradientEnd: Alignment.topRight,
+                  ),
+                  waveAmplitude: 9,
+                  size: const Size(
+                      double.infinity,
+                      100,
+                  ),
+              )),
+              const Positioned(child: Center(
+                   child: Text('HSK 3급', style: TextStyle(fontSize: 20)),
+                ))
+                  ],
+                ),
               )),
               GestureDetector(
                 onTap: () => {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const WordPage()),
+                    MaterialPageRoute(builder: (context) => const WordPage(index: 1)),
                   )
-                  
                 },
-                child: Container(  
-                padding: const EdgeInsets.all(8),  
-                child: const Center(
-                   child: Text('HSK 1급', style: TextStyle(fontSize: 20)),
-                ),  
-                color: Colors.yellow,  
+                child: Container(
+                  decoration: BoxDecoration(border: Border.all(
+                      color: Colors.transparent,
+                      width: 1,
+                    ),
+                    borderRadius: const BorderRadius.all(Radius.circular(15.0)),
+                  ),
+                // padding: const EdgeInsets.all(8),  
+                child: Stack(
+                  children: [
+                Positioned(child: Container(
+                  alignment: Alignment.bottomCenter,
+                  decoration: BoxDecoration(border: Border.all(
+                      color: Colors.transparent,
+                      width: 1,
+                    ),
+                    borderRadius: const BorderRadius.all(Radius.circular(15.0)),
+                    color: const Color(0xfffaae25)
+                  )
+                )),
+                    Positioned(child: WaveWidget(
+                  config: CustomConfig(
+                      gradients: [
+                          [Colors.orange, const Color(0xEEF44336)],
+                          [Colors.red[800]!, const Color(0x77E57373)],
+                          [Colors.orange, const Color(0x66FF9800)],
+                          [Colors.yellow[800]!, const Color(0x55FFEB3B)]
+                      ],
+                      durations: [35000, 19440, 10800, 6000],
+                      heightPercentages: [0.20, 0.23, 0.25, 0.30],
+                      // blur: const MaskFilter.blur(BlurStyle.solid, 10),
+                      gradientBegin: Alignment.bottomLeft,
+                      gradientEnd: Alignment.topRight,
+                  ),
+                  waveAmplitude: 9,
+                  size: const Size(
+                      double.infinity,
+                      100,
+                  ),
+              )),
+              const Positioned(child: Center(
+                   child: Text('HSK 4급', style: TextStyle(fontSize: 20)),
+                ))
+                  ],
+                ),
               )),
               GestureDetector(
                 onTap: () => {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const WordPage()),
+                    MaterialPageRoute(builder: (context) => const WordPage(index: 1)),
                   )
-                  
                 },
-                child: Container(  
-                padding: const EdgeInsets.all(8),  
-                child: const Center(
-                   child: Text('HSK 1급', style: TextStyle(fontSize: 20)),
-                ),  
-                color: Colors.yellow,  
+                child: Container(
+                  decoration: BoxDecoration(border: Border.all(
+                      color: Colors.transparent,
+                      width: 1,
+                    ),
+                    borderRadius: const BorderRadius.all(Radius.circular(15.0)),
+                  ),
+                // padding: const EdgeInsets.all(8),  
+                child: Stack(
+                  children: [
+                Positioned(child: Container(
+                  alignment: Alignment.bottomCenter,
+                  decoration: BoxDecoration(border: Border.all(
+                      color: Colors.transparent,
+                      width: 1,
+                    ),
+                    borderRadius: const BorderRadius.all(Radius.circular(15.0)),
+                    color: const Color(0xfffaae25)
+                  )
+                )),
+                    Positioned(child: WaveWidget(
+                  config: CustomConfig(
+                      gradients: [
+                          [Colors.orange, const Color(0xEEF44336)],
+                          [Colors.red[800]!, const Color(0x77E57373)],
+                          [Colors.orange, const Color(0x66FF9800)],
+                          [Colors.yellow[800]!, const Color(0x55FFEB3B)]
+                      ],
+                      durations: [35000, 19440, 10800, 6000],
+                      heightPercentages: [0.20, 0.23, 0.25, 0.30],
+                      // blur: const MaskFilter.blur(BlurStyle.solid, 10),
+                      gradientBegin: Alignment.bottomLeft,
+                      gradientEnd: Alignment.topRight,
+                  ),
+                  waveAmplitude: 9,
+                  size: const Size(
+                      double.infinity,
+                      100,
+                  ),
+              )),
+              const Positioned(child: Center(
+                   child: Text('HSK 5급', style: TextStyle(fontSize: 20)),
+                ))
+                  ],
+                ),
               )),
               GestureDetector(
                 onTap: () => {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const WordPage()),
+                    MaterialPageRoute(builder: (context) => const WordPage(index: 1)),
                   )
-                  
                 },
-                child: Container(  
-                padding: const EdgeInsets.all(8),  
-                child: const Center(
-                   child: Text('HSK 1급', style: TextStyle(fontSize: 20)),
-                ),  
-                color: Colors.yellow,  
+                child: Container(
+                  decoration: BoxDecoration(border: Border.all(
+                      color: Colors.transparent,
+                      width: 1,
+                    ),
+                    borderRadius: const BorderRadius.all(Radius.circular(15.0)),
+                  ),
+                // padding: const EdgeInsets.all(8),  
+                child: Stack(
+                  children: [
+                Positioned(child: Container(
+                  alignment: Alignment.bottomCenter,
+                  decoration: BoxDecoration(border: Border.all(
+                      color: Colors.transparent,
+                      width: 1,
+                    ),
+                    borderRadius: const BorderRadius.all(Radius.circular(15.0)),
+                    color: const Color(0xfffaae25)
+                  )
+                )),
+                    Positioned(child: WaveWidget(
+                  config: CustomConfig(
+                      gradients: [
+                          [Colors.orange, const Color(0xEEF44336)],
+                          [Colors.red[800]!, const Color(0x77E57373)],
+                          [Colors.orange, const Color(0x66FF9800)],
+                          [Colors.yellow[800]!, const Color(0x55FFEB3B)]
+                      ],
+                      durations: [35000, 19440, 10800, 6000],
+                      heightPercentages: [0.20, 0.23, 0.25, 0.30],
+                      // blur: const MaskFilter.blur(BlurStyle.solid, 10),
+                      gradientBegin: Alignment.bottomLeft,
+                      gradientEnd: Alignment.topRight,
+                  ),
+                  waveAmplitude: 9,
+                  size: const Size(
+                      double.infinity,
+                      100,
+                  ),
+              )),
+              const Positioned(child: Center(
+                   child: Text('HSK 6급', style: TextStyle(fontSize: 20)),
+                ))
+                  ],
+                ),
               )),
             ],  
           )
@@ -132,7 +364,7 @@ class LoginState extends State<MainPage> {
       case 3: 
       return Column(
         children: const [
-          Text("\n\nhttps://pub.dev/packages/kakao_flutter_sdk\n\nhttps://pub.dev/packages/flutter_naver_login\n\nhttps://pub.dev/packages/flutter_naver_login\n\nhttps://pub.dev/packages/sign_in_with_apple\n\nhttps://pub.dev/packages/swipable_stack\n\nhttps://pub.dev/packages/assets_audio_player\n\nhttps://pub.dev/packages/webview_flutter\n\nhttps://pub.dev/packages/url_launcher", style: TextStyle(fontSize: 15), textAlign: TextAlign.left)
+          Text("\n\n https://pub.dev/packages/kakao_flutter_sdk\n\n https://pub.dev/packages/google_sign_in\n\n https://pub.dev/packages/flutter_naver_login\n\n https://pub.dev/packages/sign_in_with_apple\n\n https://pub.dev/packages/swipable_stack\n\n https://pub.dev/packages/assets_audio_player\n\n https://pub.dev/packages/webview_flutter\n\n https://pub.dev/packages/url_launcher", style: TextStyle(fontSize: 15), textAlign: TextAlign.left)
         ],
       );
       default:
